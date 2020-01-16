@@ -1,0 +1,66 @@
+<div>
+  <div class="card">
+
+    <form class="m-5 text-center" [formGroup]="recipeForm" method="POST">
+
+      <div class="row">
+        <div class="col-3">
+          <label for="name">Name: </label>
+        </div>
+        <div class="col-6">
+          <input type="text" id="name" class="form-control" formControlName="firstName" placeholder="Name">
+        </div>
+      </div>
+
+      <div class="row pt-4">
+        <div class="col-3">
+          <label for="image">Image (URL): </label>
+        </div>
+        <div class="col-6">
+          <input type="text" id="image" class="form-control" formControlName="imgURL" placeholder="Image URL">
+        </div>
+      </div>
+
+      <div class="row pt-4">
+        <div class="col-3">
+          <label for="desc">Description: </label>
+        </div>
+        <div class="col-6">
+          <textarea id="desc" cols="54" class="form-control" rows="7" formControlName="description"
+            placeholder="Description"></textarea>
+        </div>
+      </div>
+
+      <div class="row pt-4">
+        <div class="col-3">
+          <label for="type">Food Type: </label>
+        </div>
+        <div class="col-6">
+          <select id="type" formControlName="foodType" class="form-control">
+            <option value="">--- Select Food Type ---</option>
+            <option *ngFor="let food of foodType" value="{{food.type}}">{{food.type}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row pt-4">
+        <div class="col-3">
+          <label for="auth">Chef: </label>
+        </div>
+        <div class="col-6">
+          <input type="text" id="auth" formControlName="author" class="form-control" placeholder="Chef Name">
+        </div>
+      </div>
+
+      <div class="pt-4 text-center">
+        <input type="submit" class="btn btn-primary" [disabled]="!recipeForm.valid" value="ADD RECIPE"
+          (click)="addNewRecipe()">
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<div>
+  <app-recipe-list></app-recipe-list>
+</div>
