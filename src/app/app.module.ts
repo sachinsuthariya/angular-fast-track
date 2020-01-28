@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
     AddRecipeComponent,
-    RecipeListComponent
+    RecipeListComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -2,9 +2,21 @@
   background-image: linear-gradient(to right top, #d90708, #e55736, #ed8563, #f1ad94, #f0d4c9);
 }
 
-.sqr {
+/* .sqr {
   width: 22px;
   padding: 8px 0px;
   border: solid red;
   margin: auto;
+} */
+
+/* .card {
+  width: 18rem;
+} */
+
+.foodType {
+  height: 50px;
+}
+
+.center {
+  padding-left: 40px;
 }

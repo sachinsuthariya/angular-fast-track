@@ -9,6 +9,7 @@ import { RecipeService } from "../shared/recipe.service";
 export class RecipeListComponent implements OnInit {
 
   recipeList = [];
+  curruntRecipe: any;
   constructor(private http: HttpClient,
     public recipeService: RecipeService) { }
 
@@ -17,6 +18,16 @@ export class RecipeListComponent implements OnInit {
       this.recipeList = res;
     });
     this.recipeList = this.recipeService.getRecipe();
+  }
+
+  selectedRecipe(index) {
+    this.curruntRecipe = this.recipeList[index];
+    this.curruntRecipe['index'] = index;
+    return this.curruntRecipe;
+  }
+
+  favoriteToggle(index) {
+    this.recipeService.addToFavorite(index)
   }
 
 }

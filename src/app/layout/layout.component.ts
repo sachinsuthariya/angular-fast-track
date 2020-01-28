@@ -9,11 +9,16 @@ import { Title } from '@angular/platform-browser';
 export class LayoutComponent implements OnInit {
 
   title = "Recipe";
+  navbarOpen = false;
   constructor() {
 
   }
 
   ngOnInit() {
+  }
+
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
   }
 
 }
