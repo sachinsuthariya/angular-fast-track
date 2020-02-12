@@ -27,11 +27,14 @@ export class HomeComponent implements OnInit {
   }
 
   onSearch(value) {
-    // console.log(value);
+    console.log(value);
+    let tempRecipes = this.favouriteRecipe;
     if (value) {
-      this.favouriteRecipe = this.favouriteRecipe.filter(item => item.name.includes(value));
+      return this.favouriteRecipe = tempRecipes.filter(item => item.name.includes(value));
+    } else {
+      return this.favouriteRecipe = this.favouriteRecipe;
     }
-    this.favouriteRecipe;
+
     console.log(this.favouriteRecipe);
   }
 

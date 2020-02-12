@@ -17,7 +17,7 @@
   <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" routerLink="" routerLinkActive="active">Home </a>
+        <a class="nav-link" routerLink="home" routerLinkActive="active">Home </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="addRecipe" routerLinkActive="active">Add Recipe</a>
@@ -31,10 +31,7 @@
         <a class="nav-link disabled" href="#">Disabled</a>
       </li> -->
     </ul>
-    <!-- <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form> -->
+    <img src="../../assets/image/logout.png" alt="Logout" title="Logout" (click)="onLogout()">
   </div>
 </nav>
 

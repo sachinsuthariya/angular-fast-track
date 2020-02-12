@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
+import { AuthService } from "../shared/auth.service";
 
 @Component({
   selector: 'app-layout',
@@ -10,7 +10,7 @@ export class LayoutComponent implements OnInit {
 
   title = "Recipe";
   navbarOpen = false;
-  constructor() {
+  constructor(public authService: AuthService) {
 
   }
 
@@ -19,6 +19,10 @@ export class LayoutComponent implements OnInit {
 
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
+  }
+
+  onLogout() {
+    this.authService.logout();
   }
 
 }

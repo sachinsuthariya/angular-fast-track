@@ -1,6 +1,12 @@
-<app-layout></app-layout>
-<div class="container">
-  <div class="jumbotron">
-    <router-outlet></router-outlet>
+<div *ngIf="router.url != '/login'">
+  <app-layout></app-layout>
+  <div class="container">
+    <div class="jumbotron">
+      <router-outlet></router-outlet>
+    </div>
   </div>
+</div>
+
+<div *ngIf="router.url == '/login'">
+  <router-outlet></router-outlet>
 </div>
